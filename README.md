@@ -1,5 +1,6 @@
 # SUDS
 Shower Use Detection System
+
 ![SUDS Diagram](https://github.com/SethGower/SUDS/raw/master/SUDS.png)
 
 ###Current Progress

@@ -4,6 +4,7 @@ Shower Use Detection System
 
 ![Wiring Diagram](https://github.com/SethGower/SUDS/raw/master/SUDS.png)
 
+![Geography](https://github.com/SethGower/SUDS/raw/master/SUDS%20Geography.png)
 
 ### Current Progress
 LEDs on the wall on exterior of bathroom show the occupancy status of the showers (ON == occupied). Uses limit switches on the shower locks to determine occupancy.

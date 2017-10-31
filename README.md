@@ -5,7 +5,7 @@ Built as a Hackathon Project for the CSH Fall Hackathon on October 27, 2017.
 
 | Wiring Diagram | Circuit Geography| Proto Board |
 | :------------- | :------------- | :- |
-| ![Wiring Diagram](https://github.com/SethGower/SUDS/raw/master/SUDS.png)|![Geography](https://github.com/SethGower/SUDS/raw/master/SUDS%20Geography.png)| ![Proto board, herein "The board"](https://github.com/SethGower/SUDS/raw/master/Proto%20Board%20Eagle%20Pic.png)|
+| ![Wiring Diagram](https://github.com/SethGower/SUDS/raw/master/SUDS.png)|![Geography](https://github.com/SethGower/SUDS/raw/master/SUDS%20Geography.png)[High Res Version](https://github.com/SethGower/SUDS/blob/master/SUDS%20Geography%20(High%20Res).png)| ![Proto board, herein "The board"](https://github.com/SethGower/SUDS/raw/master/Proto%20Board%20Eagle%20Pic.png)|
 
 
 ## Current Progress

@@ -7,10 +7,12 @@ Built as a Hackathon Project for the CSH Fall Hackathon on October 27, 2017.
 | :------------- | :------------- | :- |
 | ![Wiring Diagram](https://github.com/SethGower/SUDS/raw/master/SUDS.png)|![Geography](https://github.com/SethGower/SUDS/raw/master/SUDS%20Geography.png)[High Res Version](https://github.com/SethGower/SUDS/blob/master/SUDS%20Geography%20(High%20Res).png)| ![Proto board, herein "The board"](https://github.com/SethGower/SUDS/raw/master/Proto%20Board%20Eagle%20Pic.png)|
 
+-----
 
 ## Current Progress
 LEDs on the wall on exterior of bathroom show the occupancy status of the showers (ON == occupied). Uses limit switches on the shower locks to determine occupancy.
 
+----
 
 ## Parts
 1. [Various resistors: E-Projects EPC-103/A-0005-A04. 220 ohm(x4) and 110 ohm(x1)](https://www.amazon.com/gp/product/B00E9YQQSS/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1)
@@ -33,6 +35,7 @@ Current flows from the 5V rail on the board on the same row as the GPIO pin that
 ###### SUDS Box
 Another ethernet cable (using solid orange, striped orange, and solid green) connects the board to the LEDs in the SUDS box next to the door. Current flows to the anode on the LED (when the switch is closed) through the solid channel on the ethernet cable (top/close is on the green and is connected on both ends to a yellow wire, bottom/far is orange and is connected on both sides to a blue wire). Both share a common ground.
 
+----
 
 ## Future Expansion
 Will be writing a web app that shows the status of the showers for ease of access. Will possibly collect statistics to create a heat map of when the showers are most used.

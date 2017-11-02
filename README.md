@@ -5,7 +5,7 @@ Built as a Hackathon Project for the CSH Fall Hackathon on October 27, 2017.
 
 | Wiring Diagram | Circuit Geography| Proto Board |
 | :------------- | :------------- | :- |
-| ![Wiring Diagram](https://github.com/SethGower/SUDS/raw/master/SUDS.png)|![Geography](https://github.com/SethGower/SUDS/raw/master/SUDS%20Geography.png)[High Res Version](https://github.com/SethGower/SUDS/blob/master/SUDS%20Geography%20(High%20Res).png)| ![Proto board, herein "The board"](https://github.com/SethGower/SUDS/raw/master/Proto%20Board%20Eagle%20Pic.png)|
+| ![Wiring Diagram](https://github.com/SethGower/SUDS/raw/master/SUDS.png)|![Geography](https://github.com/SethGower/SUDS/raw/master/SUDS%20Geography.png)[High Res Version](/suds/SUDS Geography (High Res).png(High%20Res).png)| ![Proto board, herein "The board"](https://github.com/SethGower/SUDS/raw/master/Proto%20Board%20Eagle%20Pic.png)|
 
 -----
 
@@ -27,13 +27,13 @@ Each shower has an identical setup except for color codes.
 
 
 ###### The Shower Switches
-There are two sets of wires used in the ethernet cable going to the showers. The far shower consists of the Orange channel (Solid orange and white and orange), and the close shower using the Brown channel (solid brown and white and brown). The solid wire carries current to the `COM` terminal. The striped wire carries current from the `NO` terminal (default off terminal).
+There are two sets of wires used in the Ethernet cable going to the showers. The far shower consists of the Orange channel (Solid orange and white and orange), and the close shower using the Brown channel (solid brown and white and brown). The solid wire carries current to the `COM` terminal. The striped wire carries current from the `NO` terminal (default off terminal).
 
 ###### The Board
 Current flows from the 5V rail on the board on the same row as the GPIO pin that the certain shower uses. Then through a resistor to the adjacent proto row and to the `COM` terminal on the corresponding switch (connects to the ethernet cable via the green cable for the close shower, and blue for the far). Across the gap, the switch's `NO` terminal connects via a white wire for the close shower and yellow for far shower.
 
 ###### SUDS Box
-Another ethernet cable (using solid orange, striped orange, and solid green) connects the board to the LEDs in the SUDS box next to the door. Current flows to the anode on the LED (when the switch is closed) through the solid channel on the ethernet cable (top/close is on the green and is connected on both ends to a yellow wire, bottom/far is orange and is connected on both sides to a blue wire). Both share a common ground.
+Another Ethernet cable (using solid orange, striped orange, and solid green) connects the board to the LEDs in the SUDS box next to the door. Current flows to the anode on the LED (when the switch is closed) through the solid channel on the Ethernet cable (top/close is on the green and is connected on both ends to a yellow wire, bottom/far is orange and is connected on both sides to a blue wire). Both share a common ground.
 
 ----
 

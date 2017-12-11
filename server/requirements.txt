@@ -1,0 +1,5 @@
+flask
+flask-limiter
+flask_restful
+colour
+requests

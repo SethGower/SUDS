@@ -5,6 +5,20 @@
  * Date:
  */
 
+#include <HttpClient.h>
+HttpClient http;
+
+http_header_t headers[] = {
+  {"Content-Type", "application/json"},
+  {"Accept", "*/*"},
+  {NULL, NULL}
+};
+
+http_request_t request;
+http_response_t response;
+
+
+
 //prototypes
 int adjustBrightness(String command);
 
@@ -36,23 +50,47 @@ void setup() {
 
   mostRecentLeft = digitalRead(leftInput);
   mostRecentRight = digitalRead(rightInput);
+
+  request.hostname = "127.0.0.1";
+  request.port = 5000;
+  request.path = "/post";
 }
 
 // loop() runs over and over again, as quickly as it can execute.
 void loop() {
-  Serial.printlnf("Brightness: %d, Left: %d, Right: %d", brightness, digitalRead(leftInput), digitalRead(rightInput));
+  //Serial.printlnf("Brightness: %d, Left: %d, Right: %d", brightness, digitalRead(leftInput), digitalRead(rightInput));
 
-  /*if (mostRecentLeft != digitalRead(leftInput)) {
-    //Particle.publish("Left Change", digitalRead(leftInput));
-    Serial.printf("Left Change: %d, ", digitalRead(leftInput));
+  if (mostRecentLeft != digitalRead(leftInput)) {
+    int high = 1, low = 0;
+    switch (digitalRead(leftInput)) {
+      case HIGH:
+        request.body = "{\"left\":\"1}";
+        http.post(request, response, headers);
+
+        Serial.print("Application>\tResponse status: ");
+        Serial.println(response.status);
+
+        Serial.print("Application>\tHTTP Response Body: ");
+        Serial.println(response.body);
+        break;
+      case LOW:
+        request.body = "{\"left\":\"0}";
+        http.post(request, response, headers);
+
+        Serial.print("Application>\tResponse status: ");
+        Serial.println(response.status);
+
+        Serial.print("Application>\tHTTP Response Body: ");
+        Serial.println(response.body);
+        break;
+    }
     mostRecentLeft = digitalRead(leftInput);
-    Serial.printlnf("New Left is: %d", digitalRead(leftInput));
   }
 
   if (mostRecentRight != digitalRead(rightInput)) {
-    //Particle.publish("Right Change", digitalRead(rightInput));
+    Particle.publish("Right Change", digitalRead(rightInput));
     mostRecentRight = digitalRead(rightInput);
-  }*/
+  }
 
   delay(500);
 }

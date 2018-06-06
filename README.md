@@ -1,3 +1,5 @@
+# Migrating to [GitLab](https://gitlab.com/sethgower/suds)
+
 # SUDS
 Shower Use Detection System
 
